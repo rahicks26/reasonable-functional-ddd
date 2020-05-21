@@ -4,11 +4,19 @@ We will be setting up a few different environments for various talks, please tak
 
 # ReasonML
 
-If you are using ReasonML you will need to have bs-platform installed and while I tend to avoid global installs this one seems to work best with it.
+If you are using ReasonML you will need to have bs-platform installed or you will need to leverage npx to do it locally. Here are both ways real quick:
 
+## Global
 ```
-npm i bs-platform
+npm i bs-platform -g
 bsb -init project-name -theme basic-reason
+cd project-name
+npm run build
+```
+
+## Local
+```
+npx -p bs-platform bsb -init project-name -theme basic-reason
 cd project-name
 npm run build
 ```
